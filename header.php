@@ -8,8 +8,7 @@
     	<title><?php $this->archiveTitle(array(
             'category'  =>  _t('分类 %s 下的文章'),
             'search'    =>  _t('包含关键字 %s 的文章'),
-            'tag'       =>  _t('标签 %s 下的文章'),
-            'author'    =>  _t('%s 发布的文章')
+            'tag'       =>  _t('标签 %s 下的文章')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
         <?php if ($this->options->siteIcon): ?>
         <link rel="Shortcut Icon" href="<?php $this->options->siteIcon() ?>" />
@@ -73,8 +72,19 @@
 							<li<?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?>><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
 				      	<?php endwhile; ?>
 				    </ul>
+
+				    <ul class="nav navbar-nav navbar-right">
+				      	<?php if ($this->options->GitHubName): ?>
+				      	<li><a href="https://github.com/<?php $this->options->GitHubName() ?>" target="_blank"><i class="fa fa-github-alt"></i>GitHub</a></li>
+				      	<?php endif; ?>
+				      	<?php if ($this->options->weibolink): ?>
+				      	<li><a href="<?php $this->options->weibolink() ?>" target="_blank"><i class="fa fa-weibo"></i>微博</a></li>
+				      	<?php endif; ?>
+				    </ul>
+
                     <?php if ( !empty($this->options->misc) && in_array('ShowLogin', $this->options->misc) ) : ?>
 				    <ul class="nav navbar-nav navbar-right">
+
 				    	<?php if($this->user->hasLogin()): ?>
 				    		<li><a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a></li>
 				    		<li><a href="<?php $this->options->logoutUrl(); ?>">Logout</a></li>
@@ -87,4 +97,5 @@
 			</div>
 		</div>
 	</header>
+
 

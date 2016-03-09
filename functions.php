@@ -10,6 +10,12 @@ function themeConfig($form) {
     $miibeian = new Typecho_Widget_Helper_Form_Element_Text('miibeian', NULL, _t('京ICP备 备你妈的案'), _t('备案号'), _t('在这里填入天朝备案号，不显示则留空'));
     $form->addInput($miibeian);
 
+    $GitHubName = new Typecho_Widget_Helper_Form_Element_Text('GitHubName', NULL, _t('GitHub帐号'), _t('GitHub账号'), _t('输入GitHub用户名，不显示则留空'));
+    $form->addInput($GitHubName);
+
+    $weibolink = new Typecho_Widget_Helper_Form_Element_Text('weibolink', NULL, _t('微博链接'), _t('微博链接'), _t('输入微博链接地址，不显示则留空'));
+    $form->addInput($weibolink);
+
     $misc = new Typecho_Widget_Helper_Form_Element_Checkbox('misc', array(
         'ShowLogin' => _t('前台显示登录入口'),
         'ShowLoadTime' => _t('页脚显示加载耗时')
@@ -36,3 +42,4 @@ function timer_stop( $display = 0, $precision = 3 ) {
     echo $r;
     return $r;
 }
+
