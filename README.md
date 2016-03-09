@@ -2,7 +2,7 @@
 
 Based on https://github.com/Hanccc/typecho_material_theme
 
-## feature
+## Feature
 - 浮动按钮
 - 更加适合个人博客使用
 - Sidebar友情链接
