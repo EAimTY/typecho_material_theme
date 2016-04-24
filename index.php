@@ -1,11 +1,12 @@
 <?php
 
 /**
- * 这是由HanSon制作的，基于Google Material Design，并由EAimTY修改并添加功能的Typecho模板。
+ * 这是HanSon 基于material 的Typecho模板
  *
- * @package Typecho Material Theme
- * @author <a target="_blank" href="http://hanc.cc">HanSon</a> & <a target="_blank" href="https://www.eaimty.xyz">EAimTY</a>
+ * @package Material Theme
+ * @author HanSon
  * @version 2.0.0
+ * @link http://hanc.cc
  */
 
 $this->need('header.php');

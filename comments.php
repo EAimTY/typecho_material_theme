@@ -6,7 +6,7 @@
             <span id="commentCount"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 条评论')); ?></span>
         </div>
         <?php $comments->listComments(); ?>
-        <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+        <?php $comments->pageNav('«', '»'); ?>
         <div id="<?php $this->respondId(); ?>" class="respond">
             <div class="respond panel panel-default">
                 <div class="panel-body">
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="url" class="col-sm-2 control-label required">网站&nbsp;&nbsp;</label>
+                            <label for="url" class="col-sm-2 control-label required">网站&nbsp;</label>
                             <div class="col-sm-9">
                                 <div class="form-control-wrapper">
                                     <input type="url" name="url" class="form-control text empty" size="35" value="<?php $this->remember('url'); ?>" placeholder="http://"/>
