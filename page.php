@@ -1,5 +1,4 @@
 <?php
-
     if (isset($_GET["action"]) && $_GET["action"] == "ajax_comments") {
         $this->need('comments.php');
     } else {
