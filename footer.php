@@ -8,12 +8,12 @@
                         <li>Powered by <a target="_blank" href="http://typecho.org/" rel="nofollow">Typecho)))</a></li>
                         <li>Optimized by <a target="_blank" href="http://hanc.cc">HanSon</a></li>
 
-                        <?php if($this->options->miibeian) : ?>
+                        <?php if($this->options->miibeian): ?>
                             <li><a target="_blank" href="http://www.miibeian.gov.cn" rel="nofollow"><?php echo $this->options->miibeian; ?></a></li>
                         <?php endif; ?>
 
-                        <?php if ( !empty($this->options->footer) && in_array('ShowLoadTime', $this->options->footer) ) : ?>
-                            <li>加载耗时：<?php echo timer_stop(), ' s'; ?></li>
+                        <?php if(!empty($this->options->footer) && in_array('ShowLoadTime',$this->options->footer)): ?>
+                            <li>加载耗时：<?php echo timer_stop(),' s'; ?></li>
                         <?php endif; ?>
                     </ul>
                 </div>

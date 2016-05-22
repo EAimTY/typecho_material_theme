@@ -2,7 +2,7 @@
 
 <div class="container" id="main">
     <div class="row">
-        <div class="col-md-9">
+        <div class="<?php if(empty($this->options->sidebar)):echo"col-md-12";else:echo"col-md-9";endif; ?>">
             <div class="alert alert-success">您正在查看: <?php $this->archiveTitle(array(
                 'category'  =>  _t(' %s 分类下的文章'),
                 'search'    =>  _t('包含关键字 %s 的文章'),
@@ -20,7 +20,7 @@
                             <span>分类：<?php $this->category(','); ?> | </span>
                             <span>评论：<a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a> </span>
                         </div>
-                        <div class="post-content"><?php $this->content('<p align="right">阅读全文...</p>'); ?></div>
+                        <div class="post-content"><?php $this->content('<p class="all">阅读全文...</p>'); ?></div>
                     </div>
                 </div>
                 <?php endwhile; ?>

@@ -73,13 +73,13 @@
                         </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <?php if ($this->options->GitHubName): ?>
+                        <?php if($this->options->GitHubName): ?>
                             <li><a href="https://github.com/<?php $this->options->GitHubName(); ?>" target="_blank">GitHub</a></li>
                         <?php endif; ?>
-                        <?php if ($this->options->weibolink): ?>
+                        <?php if($this->options->weibolink): ?>
                             <li><a href="<?php $this->options->weibolink(); ?>" target="_blank">微博</a></li>
                         <?php endif; ?>
-                        <?php if( !empty($this->options->header) && in_array('ShowRSS', $this->options->header)): ?>
+                        <?php if(!empty($this->options->header) && in_array('ShowRSS',$this->options->header)): ?>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown">RSS<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -88,7 +88,7 @@
                                 </ul>
                             </li>
                         <?php endif; ?>
-                        <?php if( !empty($this->options->header) && in_array('ShowLogin', $this->options->header)): ?>
+                        <?php if(!empty($this->options->header) && in_array('ShowLogin',$this->options->header)): ?>
                             <?php if($this->user->hasLogin()): ?>
                                 <li><a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a></li>
                                 <li><a href="<?php $this->options->logoutUrl(); ?>">退出</a></li>

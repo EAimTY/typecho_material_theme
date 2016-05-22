@@ -9,7 +9,7 @@
 <div class="container" id="main">
     <div class="row">
 
-        <div class="col-md-9">
+        <div class="<?php if(empty($this->options->sidebar)):echo"col-md-12";else:echo"col-md-9";endif; ?>">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h3 class="post-title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title() ?></a></h3>
@@ -19,7 +19,7 @@
                         <span>分类：<?php $this->category(','); ?> | </span>
                         <span>评论：<a href="<?php $this->permalink() ?>"><?php $this->commentsNum('%d 评论'); ?></a> </span>
                     </div>
-                    <div class="post-content"><?php $this->content('<p align="right">阅读全文...</p>'); ?></div>
+                    <div class="post-content"><?php $this->content('<p class="all">阅读全文...</p>'); ?></div>
                 </div>
             </div>
             <?php $this->need('comments.php'); ?>
