@@ -16,7 +16,7 @@ function themeConfig($form) {
     $weibolink = new Typecho_Widget_Helper_Form_Element_Text('weibolink', NULL, NULL, _t('微博链接'), _t('输入微博链接地址，不显示则留空'));
     $form->addInput($weibolink);
 
-    $Links = new Typecho_Widget_Helper_Form_Element_Textarea('Links', NULL, _t('&lt;a target="_blank" href="https://www.eaimty.xyz/" class="item"&gt;EAimTY的博客&lt;/a&gt;'), _t('友情链接代码'), _t('按照 <i>&lt;a target="_blank" href="<b>友情链接URL</b>" class="item"&gt;<b>友情链接名称</b>&lt;/a&gt;</i> 的格式输入友情链接，一条一行'));
+    $Links = new Typecho_Widget_Helper_Form_Element_Textarea('Links', NULL, _t('<a target="_blank" href="https://www.eaimty.xyz/" class="item">EAimTY的博客</a>'), _t('友情链接代码'), _t('按照 <i>&lt;a target="_blank" href="<b>友情链接URL</b>" class="item"&gt;<b>友情链接名称</b>&lt;/a&gt;</i> 的格式输入友情链接，一条一行'));
     $form->addInput($Links);
 
     $header = new Typecho_Widget_Helper_Form_Element_Checkbox('header', array(
