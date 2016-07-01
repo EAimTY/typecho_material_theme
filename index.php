@@ -41,7 +41,9 @@ $this->need('header.php');
                 </div>
             </div>
             <?php endwhile; ?>
-            <?php $this->pageNav('«','»'); ?>
+            <div class="pagination pagination-sm">
+                <?php $this->pageNav('«','»'); ?>
+            </div>
         </div>
 
     <?php $this->need('sidebar.php'); ?>

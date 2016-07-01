@@ -24,14 +24,14 @@
                     </div>
                 </div>
                 <?php endwhile; ?>
-                <?php else: ?>
-                    <article class="block">
-                        <h2 class="header"><?php _e('您貌似走错了 ¯\_(ツ)_/¯'); ?></h2>
-                    </article>
-                <?php endif; ?>
-
-            <?php $this->pageNav('«','»'); ?>
-
+            <?php else: ?>
+                <article class="block">
+                    <h2 class="header"><?php _e('您貌似走错了 ¯\_(ツ)_/¯'); ?></h2>
+                </article>
+            <?php endif; ?>
+            <div class="pagination pagination-sm">
+                <?php $this->pageNav('«','»'); ?>
+            </div>
         </div>
         <?php $this->need('sidebar.php'); ?>
         <?php $this->need('footer.php'); ?>

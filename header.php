@@ -28,12 +28,6 @@
         <div class="navbar navbar-fixed-top navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
                 </div>
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -46,7 +40,7 @@
                                 <?php if(count($category->children)):?>
                                     <li class="dropdown">
                                         <a href="<?php $category->permalink(); ?>" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
-                                            <?php echo $category->name; ?><b class="caret"></b>
+                                            <?php echo $category->name; ?><span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><a href="<?php echo $category->permalink(); ?>"><?php echo $category->name; ?></a></li>
@@ -81,7 +75,7 @@
                         <?php endif; ?>
                         <?php if(!empty($this->options->header) && in_array('ShowRSS',$this->options->header)): ?>
                             <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown">RSS<b class="caret"></b></a>
+                                <a data-target="#" class="dropdown-toggle" data-toggle="dropdown">RSS<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a target="_blank" href="<?php $this->options->feedUrl(); ?>">文章RSS</a></li>
                                     <li><a target="_blank" href="<?php $this->options->commentsFeedUrl(); ?>">评论RSS</a></li>
