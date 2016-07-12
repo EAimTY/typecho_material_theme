@@ -27,14 +27,13 @@ function themeConfig($form) {
     $form->addInput($header->multiMode());
 
     $sidebar = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebar', array(
-        'ShowSearchForm' => _t('显示搜索框'),
         'ShowPosts' => _t('显示最新文章'),
         'ShowComments' => _t('显示最新评论'),
         'ShowTags' => _t('显示标签'),
         'ShowArchives' => _t('显示归档'),
         'ShowLinks' => _t('显示友情链接'),
         ),
-    array('ShowSearchForm','ShowPosts','ShowComments','ShowTags','ShowArchives','ShowLinks'), _t('侧边栏选项'));
+    array('ShowPosts','ShowComments','ShowTags','ShowArchives','ShowLinks'), _t('侧边栏选项'));
     $form->addInput($sidebar->multiMode());
 
     $footer = new Typecho_Widget_Helper_Form_Element_Checkbox('footer', array(

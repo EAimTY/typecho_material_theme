@@ -1,18 +1,5 @@
 <div class="col-md-3">
 
-    <?php if(!empty($this->options->sidebar) && in_array('ShowSearchForm',$this->options->sidebar)): ?>
-        <form method="post" action="">
-            <div class="label-floating">
-                <div class="input-group">
-                    <input type="text" name="s" class="form-control" placeholder="搜索" />
-                    <span class="input-group-btn btn-group-sm">
-                        <button class="btn btn-primary btn-fab" value="" type="submit"><small><span class="glyphicon glyphicon-search" aria-hidden="true"></span></small></button>
-                    </span>
-                </div>
-            </div>
-        </form>
-    <?php endif; ?>
-
     <?php if(!empty($this->options->sidebar) && in_array('ShowPosts',$this->options->sidebar)): ?>
         <div class="panel panel-primary">
             <a class="panel-heading" onclick="$('.recent_posts_box').slideToggle()" href="javascript:;">
