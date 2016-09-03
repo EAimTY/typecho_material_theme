@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/style.min.css'); ?>" />
     <?php if ($this->options->avatar): ?>
-      <link rel="Shortcut Icon" href="<?php $this->options->avatar() ?>" />
-      <link rel="Bootmark" href="<?php $this->options->avatar() ?>" />
+      <link rel="Shortcut Icon" href="<?php $this->options->avatar(); ?>" />
+      <link rel="Bootmark" href="<?php $this->options->avatar(); ?>" />
     <?php endif; ?>
     <?php $this->header(); ?>
   </head>
@@ -38,7 +38,7 @@
       <div class="mdl-layout__drawer drawer-background">
         <span class="mdl-layout-title billboard">
           <?php if ($this->options->avatar): ?>
-            <a href="<?php $this->options->siteUrl(); ?>"><img alt="Avatar" class="drawer-avatar" src="<?php $this->options->avatar; ?>" /></a>
+            <a href="<?php $this->options->siteUrl(); ?>"><img alt="Avatar" class="drawer-avatar" src="<?php $this->options->avatar(); ?>" /></a>
           <?php endif; ?>
           <a class="drawer-title" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
         </span>

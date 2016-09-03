@@ -16,6 +16,9 @@
 2. 重命名主题文件夹(如`Material`)
 3. 进入后台并启用主题
 
+## Customize
+前往 https://getmdl.io/customize/index.html 自定义颜色，下载后替换css目录中的`material.min.css`文件
+
 ## Demo
 https://www.eaimty.xyz/
 
