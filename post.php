@@ -13,12 +13,12 @@
     </div>
     <div class="post-chip">
       <span class="mdl-chip mdl-color-text--grey-700">
-        <span class="mdl-chip__contact"><i class="material-icons chip-icon">category</i></span>
+        <span class="mdl-chip__contact"><i class="material-icons chip-icon">storage</i></span>
         <span class="mdl-chip__text"><?php $this->category(','); ?></span>
       </span>
       <span class="mdl-chip mdl-color-text--grey-700">
         <span class="mdl-chip__contact"><i class="material-icons chip-icon">tag</i></span>
-        <span class="mdl-chip__text"><?php $this->tags(' & ', true, 'none'); ?></span>
+        <span class="mdl-chip__text"><?php $this->label(' & ', true, 'none'); ?></span>
       </span>
     </div>
 

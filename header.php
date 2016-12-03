@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.min.css'); ?>" />
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/style.min.css'); ?>" />
+    <link rel="stylesheet" href="https://fonts.proxy.ustclug.org/icon?family=Material+Icons" />
     <?php if ($this->options->avatar): ?>
       <link rel="Shortcut Icon" href="<?php $this->options->avatar(); ?>" />
       <link rel="Bootmark" href="<?php $this->options->avatar(); ?>" />
@@ -45,15 +46,15 @@
         <nav class="mdl-navigation">
           <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
           <?php while ($category->next()): ?>
-            <a href="<?php $category->permalink(); ?>" class="mdl-navigation__link"><div class="material-icons drawer-icon">category</div><?php $category->name(); ?></a>
+            <a href="<?php $category->permalink(); ?>" class="mdl-navigation__link"><div class="material-icons drawer-icon">storage</div><?php $category->name(); ?></a>
           <?php endwhile; ?>
           <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
           <?php while ($pages->next()): ?>
-            <a href="<?php $pages->permalink(); ?>" class="mdl-navigation__link"><div class="material-icons drawer-icon">page</div><?php $pages->title(); ?></a>
+            <a href="<?php $pages->permalink(); ?>" class="mdl-navigation__link"><div class="material-icons drawer-icon">description</div><?php $pages->title(); ?></a>
           <?php endwhile; ?>
           <?php if ($this->options->drawer && in_array('showrss', $this->options->drawer)): ?>
             <hr />
-            <a class="mdl-navigation__link" onclick="$('.rss_feed').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon">rss</div>RSS<i class="material-icons">arrow_drop_down</i></a>
+            <a class="mdl-navigation__link" onclick="$('.rss_feed').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon"><i class="material-icons">rss_feed</i></div>RSS<i class="material-icons">arrow_drop_down</i></a>
             <div class="dropdown-menu rss_feed">
               <a href="<?php $this->options->feedUrl(); ?>" class="mdl-navigation__link"><div class="dropdown-item">文章RSS</div></a>
               <a href="<?php $this->options->commentsFeedUrl(); ?>" class="mdl-navigation__link"><div class="dropdown-item">评论RSS</div></a>
@@ -61,14 +62,14 @@
           <?php endif; ?>
           <?php if ($this->options->drawer && in_array('showposts', $this->options->drawer)): ?>
             <hr />
-            <a class="mdl-navigation__link" onclick="$('.latest_posts').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon">article</div>最新文章<i class="material-icons">arrow_drop_down</i></a>
+            <a class="mdl-navigation__link" onclick="$('.latest_posts').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon">library_books</div>最新文章<i class="material-icons">arrow_drop_down</i></a>
             <div class="dropdown-menu latest_posts">
               <?php $this->widget('Widget_Contents_Post_Recent')->parse('<a href="{permalink}" class="mdl-navigation__link"><div class="dropdown-item">{title}</div></a>'); ?>
             </div>
           <?php endif; ?>
           <?php if ($this->options->drawer && in_array('showcomments', $this->options->drawer)): ?>
             <hr />
-            <a class="mdl-navigation__link" onclick="$('.latest_comments').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon">comment</div>最新评论<i class="material-icons">arrow_drop_down</i></a>
+            <a class="mdl-navigation__link" onclick="$('.latest_comments').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon">message</div>最新评论<i class="material-icons">arrow_drop_down</i></a>
             <div class="dropdown-menu latest_comments">
               <?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
               <?php while ($comments->next()): ?>
@@ -85,7 +86,7 @@
           <?php endif; ?>
           <?php if ($this->options->drawer && in_array('showtags', $this->options->drawer)): ?>
             <hr />
-            <a class="mdl-navigation__link" onclick="$('.tags_box').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon">tag</div>常用标签<i class="material-icons">arrow_drop_down</i></a>
+            <a class="mdl-navigation__link" onclick="$('.tags_box').slideToggle()" href="javascript:;"><div class="material-icons drawer-icon">loyalty</div>常用标签<i class="material-icons">arrow_drop_down</i></a>
             <div class="dropdown-menu tags_box">
               <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=1&limit=5')->to($tags); ?>
               <?php if ($tags->have()): ?>

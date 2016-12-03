@@ -5,7 +5,7 @@
     <div class=“breadcrumb”>
       <div class="post-chip">
         <span class="mdl-chip">
-          <span class="mdl-chip__contact"><i class="material-icons chip-icon">location</i></span>
+          <span class="mdl-chip__contact"><i class="material-icons chip-icon">my_location</i></span>
           <span class="mdl-chip__text">
             您正在查看:
             <?php $this->archiveTitle(array(
@@ -31,10 +31,10 @@
     <?php endwhile; ?>
   </div>
   <div class="pagenav prev-page">
-    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">prev</i></div>'); ?>
+    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">keyboard_arrow_left</i></div>'); ?>
   </div>
   <div class="pagenav next-page">
-    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">next</i></div>','next'); ?>
+    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">keyboard_arrow_right</i></div>','next'); ?>
   </div>
 </div>
 

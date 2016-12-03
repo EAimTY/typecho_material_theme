@@ -4,8 +4,8 @@
  *
  * @package Typecho Material Theme
  * @author EAimTY
- * @version 0.0.1
- * @link https://www.eaimty.xyz/
+ * @version 0.0.2
+ * @link https://www.eaimty.com/
  */
 
   $this->need('header.php');
@@ -26,10 +26,10 @@
     <?php endwhile; ?>
   </div>
   <div class="pagenav prev-page">
-    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">prev</i></div>'); ?>
+    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">keyboard_arrow_left</i></div>'); ?>
   </div>
   <div class="pagenav next-page">
-    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">next</i></div>','next'); ?>
+    <?php $this->pageLink('<div class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"><i class="material-icons">keyboard_arrow_right</i></div>','next'); ?>
   </div>
 </div>
 

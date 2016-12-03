@@ -8,8 +8,8 @@ function themeConfig($form) {
   $form->addInput($github);
   $twitter = new Typecho_Widget_Helper_Form_Element_Text('twitter', NULL, NULL, _t('Twitter'), _t('输入Twitter用户名，不显示则留空'));
   $form->addInput($twitter);
-  $weibo = new Typecho_Widget_Helper_Form_Element_Text('weibo', NULL, NULL, _t('新浪微博'), _t('输入微博链接地址，不显示则留空'));
-  $form->addInput($weibo);
+  $netease_music = new Typecho_Widget_Helper_Form_Element_Text('netease_music', NULL, NULL, _t('网易云音乐'), _t('输入网易云音乐用户链接地址，不显示则留空'));
+  $form->addInput($netease_music);
   $miibeian = new Typecho_Widget_Helper_Form_Element_Text('miibeian', NULL, NULL, _t('备案号'), _t('输入备案号，不显示则留空'));
   $form->addInput($miibeian);
   $links = new Typecho_Widget_Helper_Form_Element_Textarea('links', NULL, NULL, _t('友情链接代码'), _t('按照 <i>&lt;a target="_blank" href="友情链接URL" class="mdl-navigation__link"&gt;&lt;div class="dropdown-item"&gt;友情链接名称&lt;/div&gt;&lt;/a&gt;</i> 的格式输入友情链接，一条一行'));

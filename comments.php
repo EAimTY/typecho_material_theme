@@ -36,7 +36,7 @@
       <?php $this->comments()->to($comments); ?>
       <div class="post-chip">
         <span class="mdl-chip">
-          <span class="mdl-chip__contact"><i class="material-icons chip-icon">comment</i></span>
+          <span class="mdl-chip__contact"><i class="material-icons chip-icon">message</i></span>
           <span class="mdl-chip__text"><?php $this->commentsNum(_t('暂无评论'), _t('仅有一条评论'), _t('已有 %d 条评论')); ?></span>
         </span>
       </div>
@@ -90,7 +90,7 @@
       <?php else: ?>
         <div class="post-chip">
           <span class="mdl-chip">
-            <span class="mdl-chip__contact"><i class="material-icons chip-icon">comment</i></span>
+            <span class="mdl-chip__contact"><i class="material-icons chip-icon">message</i></span>
             <span class="mdl-chip__text">评论已关闭</span>
           </span>
         </div>
